@@ -12,7 +12,7 @@ class App extends Component {
 		this.state = {
 			organizationConfig: null,
 			definitionList: null,
-			definitionLink: "https://petstore.swagger.io/v2/swagger.json"
+			definitionLink: "https://api.swaggerhub.com/apis/api-doc-test1/emission-service_api/0.10"
 		}
 		this.swaggerhub = this.swaggerhub.bind(this)
 		this.getOrganizationData = this.getOrganizationData.bind(this)
@@ -20,12 +20,20 @@ class App extends Component {
 	}
 
 	// Mounting each api
-	componentDidMount() {
+	componentDidUpdate() {
 		SwaggerUI({
 			domNode: document.getElementById("api-data"),
 			url: this.state.definitionLink,
+			supportedSubmitMethods: ["head"],
+			tryItOutEnabled: false,
+			docExpansion: ["none"],
+			showExtensions: false,
+			deepLinking: true,
+			displayOperationId: false,
 		});	
 	}
+
+	
 
 	swaggerhub(inputMethod, inputResource, inputParams) {
 		let url = "";
@@ -77,13 +85,18 @@ class App extends Component {
 
 	render() {
 		return (
+
 			<div className="App">
+
 				<Sidebar
 					organizationConfig={this.state.organizationConfig}
 					definitionList={this.state.definitionList}
 					updateDefinitionLink={this.updateDefinitionLink}
 					getOrganizationData={this.getOrganizationData}
 				/>
+
+
+				<p>hi</p>
 				<div id="api-data" />
 			</div>
 		);
