@@ -18,7 +18,7 @@
   align-items: center;
   padding: 10px;
   color: whitesmoke;
-  background-color: #2d383a;
+  background-color: whitesmoke;
   border-bottom: 5px solid crimson;
 }
 
@@ -50,3 +50,8 @@
   border-left: 5px solid crimson;
   transition: all .1s ease;
 }
+
+.side-bar-header img {
+     width: 80%; 
+    
+  }

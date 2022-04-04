@@ -24,7 +24,7 @@ const Sidebar = props => {
   return (
     <div className="side-bar">
         <div className="side-bar-header">
-            <h1>{organizationConfig.displayName}</h1>
+            <img src={organizationConfig.displayImage} alt="logo"/>
         </div>
         <div className="side-bar-body">
             <h3>API DOCS</h3>

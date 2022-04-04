@@ -26,7 +26,6 @@ class App extends Component {
 			url: this.state.definitionLink,
 			supportedSubmitMethods: ["head"],
 			tryItOutEnabled: false,
-			docExpansion: ["none"],
 			showExtensions: false,
 			deepLinking: true,
 			displayOperationId: false,
@@ -96,7 +95,7 @@ class App extends Component {
 				/>
 
 
-				<p>hi</p>
+				
 				<div id="api-data" />
 			</div>
 		);
