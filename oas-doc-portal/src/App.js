@@ -19,7 +19,7 @@ class App extends Component {
 		this.updateDefinitionLink = this.updateDefinitionLink.bind(this)
 	}
 
-	// Mounting each api
+	// Mounting each api.
 	componentDidUpdate() {
 		SwaggerUI({
 			domNode: document.getElementById("api-data"),
